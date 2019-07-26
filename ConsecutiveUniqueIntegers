@@ -12,12 +12,10 @@ int main()
     for(i=0;i<=n-x;i++){
         m=0;
         for(j=i;j<i+x;j++){
-            if(x<n){
             for(k=j+1;k<i+x;k++){
                 if(arr[j]==arr[k]){
                     m=1;
                 }
-            }
             }
         }
         if(m==0){
