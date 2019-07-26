@@ -1,0 +1,33 @@
+# Coding-problems
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num,i,j,val;
+    scanf("%d",&num);
+    int k=(2*num)-2;
+    int x=k;
+    for(i=0;i<num;i++){
+        val=0;
+        for(j=0;j<=x;j++){
+            if(j%2==0){
+                val++;
+            }
+            if(j%2==0 && i+j<=k && j>=i){
+                printf("%d ",val);
+            }
+            else if(i>j && i!=j){
+                printf("- ");
+            }
+            else{
+                printf("* ");
+            }
+        }
+        printf("\n");
+        x--;
+        
+    }
+
+
+}
