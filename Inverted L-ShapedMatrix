@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int num,i,j,k;
+    scanf("%d",&num);
+    int arr[num][num];
+    for(i=0;i<num;i++){
+        for(j=0;j<num;j++){
+            scanf("%d ",&arr[i][j]);
+        }
+    }
+    for(i=0;i<num;i++){
+        for(j=0;j<=i+1;j++){
+            if(j<=i){
+                printf("%d ",arr[i][j]);
+            }
+            else{
+                for(k=i-1;k>=0;k--){
+                    printf("%d ",arr[k][i]);
+                }
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+
+
+}
